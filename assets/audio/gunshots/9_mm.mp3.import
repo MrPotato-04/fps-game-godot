@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/9_mm.mp3-0048034e8608a8a513656d8ce632a21b.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/gunshots/9_mm.mp3"
+dest_files=[ "res://.import/9_mm.mp3-0048034e8608a8a513656d8ce632a21b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
