@@ -8,7 +8,7 @@
 [ext_resource path="res://actors/player/gun/animations/Hide.tres" type="Animation" id=6]
 [ext_resource path="res://actors/player/gun/animations/Shoot.tres" type="Animation" id=7]
 [ext_resource path="res://actors/player/gun/gun.gd" type="Script" id=8]
-[ext_resource path="res://assets/audio/gunshots/9_mm.wav" type="AudioStream" id=9]
+[ext_resource path="res://assets/audio/gunshots/9_mm_edit.wav" type="AudioStream" id=9]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Sketchfab_Scene_Hand_Mesh_Hand_D_0"
@@ -563,10 +563,6 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -10, 151, 19 )
 stream = ExtResource( 9 )
 unit_size = 0.5
 max_db = 1.0
-
-[node name="Timer" type="Timer" parent="Sketchfab_model/bf2d975137f8485789cd58bed6e8bc8dfbx/Object_2/RootNode/Object_4/Skeleton/Object_10"]
-wait_time = 0.4
-one_shot = true
 
 [node name="Object_11" type="MeshInstance" parent="Sketchfab_model/bf2d975137f8485789cd58bed6e8bc8dfbx/Object_2/RootNode/Object_4/Skeleton"]
 mesh = SubResource( 6 )

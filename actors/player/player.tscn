@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://actors/player/players.gd" type="Script" id=1]
 [ext_resource path="res://actors/player/gun/Pistol.tscn" type="PackedScene" id=2]
+[ext_resource path="res://actors/player/Camera.gd" type="Script" id=3]
+[ext_resource path="res://actors/player/player_hud.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleMesh" id=1]
 mid_height = 2.5
@@ -37,9 +39,17 @@ shape = SubResource( 4 )
 [node name="Head" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -1 )
 
-[node name="Camera" type="Camera" parent="Head"]
+[node name="Player_Camera" type="Camera" parent="Head"]
 doppler_tracking = 2
 fov = 90.0
+script = ExtResource( 3 )
+
+[node name="RayCast" type="RayCast" parent="Head/Player_Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0285501 )
+enabled = true
+cast_to = Vector3( 0, 0, -100 )
+
+[node name="CanvasLayer" parent="Head/Player_Camera" instance=ExtResource( 4 )]
 
 [node name="Gun" parent="Head" instance=ExtResource( 2 )]
 transform = Transform( -0.01, 8.74228e-10, 3.82137e-17, 0, -4.37114e-10, 0.01, 8.74228e-10, 0.01, 4.37114e-10, 0.075, -1.65, -0.45 )

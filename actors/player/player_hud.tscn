@@ -1,0 +1,26 @@
+[gd_scene format=2]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+follow_viewport_enable = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -142.0
+margin_top = -35.0
+margin_right = -48.0
+margin_bottom = -20.0
+text = "Ammo Count:"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -51.0
+margin_top = -34.0
+margin_right = 1.0
+margin_bottom = -19.0
+text = "12/12"
