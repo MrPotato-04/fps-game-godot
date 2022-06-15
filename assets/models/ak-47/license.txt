@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ak47
+* source:	https://sketchfab.com/3d-models/ak47-6e51d6ffd33e412a930aff9f520066e1
+* author:	kursat_sokmen (https://sketchfab.com/kursat_sokmen)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ak47" (https://sketchfab.com/3d-models/ak47-6e51d6ffd33e412a930aff9f520066e1) by kursat_sokmen (https://sketchfab.com/kursat_sokmen) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -5,8 +5,8 @@ extends Spatial
 onready var audio_parrent: MeshInstance = $Sketchfab_model/bf2d975137f8485789cd58bed6e8bc8dfbx/Object_2/RootNode/Object_4/Skeleton/Object_10
 onready var player_1: AudioStreamPlayer3D = $Sketchfab_model/bf2d975137f8485789cd58bed6e8bc8dfbx/Object_2/RootNode/Object_4/Skeleton/Object_10/AudioStreamPlayer3D
 onready var _AnimationPlayer: AnimationPlayer = $AnimationPlayer
-onready var ammo_count_text: RichTextLabel = $"./../Player_Camera/CanvasLayer/RichTextLabel2"
-onready var player_camera: Camera = $"./../Player_Camera"
+onready var ammo_count_text: RichTextLabel = $"./../CanvasLayer/RichTextLabel2"
+onready var player_camera: Camera = $"./../../Player_Camera"
 onready var gun: Spatial = $"./../Gun" 
 onready var raycaster: RayCast = $RayCast
 onready var b_decal = preload("res://actors/player/gun/BulletDecal.tscn")
@@ -114,7 +114,7 @@ func _cast_bullet_ray():
 	var b = b_decal.instance()
 	raycaster.get_collider().add_child(b)
 	b.global_transform.origin = b_pos
-	b.look_at(b_pos + raycaster.get_collision_normal(), Vector3.UP)
+	b.look_at(raycaster.get_collision_point() + raycaster.get_collision_normal(), Vector3.UP)
 
 func _create_audio_players(num_of_players):
 	for i in num_of_players:

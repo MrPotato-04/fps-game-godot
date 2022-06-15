@@ -1,0 +1,11 @@
+Model Information:
+* title:	UMP-45 (FREE)
+* source:	https://sketchfab.com/3d-models/ump-45-free-53ec6320f1c84960a5d49fa0b7a11480
+* author:	Vinoskii (https://sketchfab.com/vinoskii)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "UMP-45 (FREE)" (https://sketchfab.com/3d-models/ump-45-free-53ec6320f1c84960a5d49fa0b7a11480) by Vinoskii (https://sketchfab.com/vinoskii) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

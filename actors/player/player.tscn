@@ -34,7 +34,7 @@ mesh = SubResource( 3 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 2.25, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 2.25, -0.675 )
 shape = SubResource( 4 )
 
 [node name="Head" type="Spatial" parent="."]
@@ -47,5 +47,6 @@ script = ExtResource( 3 )
 
 [node name="CanvasLayer" parent="Head/Player_Camera" instance=ExtResource( 4 )]
 
-[node name="Gun" parent="Head" instance=ExtResource( 2 )]
+[node name="Gun" parent="Head/Player_Camera" instance=ExtResource( 2 )]
 transform = Transform( -0.01, 8.74228e-10, 3.82137e-17, 0, -4.37114e-10, 0.01, 8.74228e-10, 0.01, 4.37114e-10, 0.075, -1.65, -0.45 )
+skeleton = NodePath("")

@@ -251,7 +251,7 @@ surfaces/0 = {
 "vertex_count": 314
 }
 
-[node name="Gun" type="Spatial"]
+[node name="Gun" type="MeshInstance"]
 transform = Transform( 0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 0, 0, 0 )
 script = ExtResource( 8 )
 

@@ -12,6 +12,9 @@ export var jump_impulse: float = 12.0
 var velocity: Vector3 = Vector3.ZERO
 
 onready var head: Spatial = $Head
+onready var camera: Camera = $Head/Player_Camera
+
+
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
