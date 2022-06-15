@@ -586,3 +586,11 @@ anims/Draw = ExtResource( 4 )
 anims/Hide = ExtResource( 6 )
 anims/Reload = ExtResource( 5 )
 anims/Shoot = ExtResource( 7 )
+
+[node name="RayCast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -10.8284, -20.4879, 151.932 )
+enabled = true
+cast_to = Vector3( 0, 0, 1e+07 )
+collide_with_areas = true
+debug_shape_custom_color = Color( 1, 0, 0, 1 )
+debug_shape_thickness = 5

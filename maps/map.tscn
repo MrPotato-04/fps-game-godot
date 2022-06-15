@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/textures/beta/Green/texture_01.png" type="Texture" id=1]
 [ext_resource path="res://assets/textures/beta/Dark/texture_09.png" type="Texture" id=2]
 [ext_resource path="res://assets/textures/beta/Red/texture_10.png" type="Texture" id=3]
 [ext_resource path="res://actors/player/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://hdr_enviroment.tres" type="Environment" id=5]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 2 )
@@ -19,31 +20,64 @@ uv1_scale = Vector3( 0.5, 0.5, 0.5 )
 uv1_triplanar = true
 uv1_triplanar_sharpness = 137.184
 
-[node name="Map" type="Spatial"]
+[node name="Map" type="WorldEnvironment"]
+environment = ExtResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -10, 0, -10.5 )
 
-[node name="CSGCombiner" type="CSGCombiner" parent="."]
+[node name="objects" type="CSGCombiner" parent="."]
 use_collision = true
 collision_mask = 0
 
-[node name="Ground" type="CSGBox" parent="CSGCombiner"]
+[node name="Ground" type="CSGBox" parent="objects"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
 width = 30.0
 height = 1.0
 depth = 30.0
 material = SubResource( 1 )
 
-[node name="Box" type="CSGBox" parent="CSGCombiner"]
+[node name="Box" type="CSGBox" parent="objects"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1.5, 9.5 )
 width = 3.0
 height = 3.0
 depth = 3.0
 material = SubResource( 2 )
 
-[node name="Slope" type="CSGPolygon" parent="CSGCombiner"]
+[node name="Slope" type="CSGPolygon" parent="objects"]
 transform = Transform( 2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, 4.5, 0, -9 )
 polygon = PoolVector2Array( 0, 0, 0, 4, 6, 0, 6, 0 )
 depth = 3.0
+smooth_faces = true
 material = SubResource( 3 )
+
+[node name="Walls" type="CSGCombiner" parent="objects"]
+
+[node name="Wall 1" type="CSGBox" parent="objects/Walls"]
+transform = Transform( 0.000471191, 1, 0, -1, 0.000471191, 0, 0, 0, 1, -15.0148, 4.03732, 0 )
+width = 10.0
+height = 1.0
+depth = 30.0
+
+[node name="Wall 2" type="CSGBox" parent="objects/Walls"]
+transform = Transform( 0.000471191, 1, 0, -1, 0.000471191, 0, 0, 0, 1, 15.0707, 4.03732, 0 )
+width = 10.0
+height = 1.0
+depth = 30.0
+
+[node name="Wall 3" type="CSGBox" parent="objects/Walls"]
+transform = Transform( 5.59243e-07, 0.00118687, 0.999999, -1, 0.000471191, 0, -0.00047119, -0.999999, 0.00118687, -0.0235844, 4.03732, -15.0427 )
+width = 10.0
+height = 1.0
+depth = 30.0
+
+[node name="Wall 4" type="CSGBox" parent="objects/Walls"]
+transform = Transform( 5.59243e-07, 0.00118687, 0.999999, -1, 0.000471191, 0, -0.00047119, -0.999999, 0.00118687, -0.0235844, 4.03732, 14.8367 )
+width = 10.0
+height = 1.0
+depth = 30.0
+
+[node name="DirectionalLight" type="DirectionalLight" parent="objects"]
+transform = Transform( 1, 0, 0, 0, 0.682981, 0.730436, 0, -0.730436, 0.682981, 0, 42.3901, 29.2376 )
+shadow_enabled = true
+directional_shadow_blend_splits = true

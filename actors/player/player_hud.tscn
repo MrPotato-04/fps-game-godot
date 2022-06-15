@@ -1,4 +1,9 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="ShaderMaterial" id=1]
+
+[sub_resource type="SphereMesh" id=2]
+material = SubResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer"]
 follow_viewport_enable = true
@@ -24,3 +29,8 @@ margin_top = -34.0
 margin_right = 1.0
 margin_bottom = -19.0
 text = "12/12"
+
+[node name="test_crosshair" type="MeshInstance2D" parent="."]
+visible = false
+position = Vector2( 960, 540 )
+mesh = SubResource( 2 )

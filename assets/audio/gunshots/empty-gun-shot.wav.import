@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/empty-gun-shot.wav-90bb0271e11c1effe3359c88b1109810.sample"
+
+[deps]
+
+source_file="res://assets/audio/gunshots/empty-gun-shot.wav"
+dest_files=[ "res://.import/empty-gun-shot.wav-90bb0271e11c1effe3359c88b1109810.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
