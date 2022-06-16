@@ -6,4 +6,4 @@ bin/
 build/
 lib/
 
-exprt/*.pck
+export/*.pck
