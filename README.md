@@ -2,6 +2,8 @@
 (Title is WIP)<br>
 WIP fps game build in godot game engine
 
+---
+
 ## 1 - Description:
 This is a Wip Singleplayer fps game
 ## 2 - Features on roadmap:
@@ -24,6 +26,8 @@ This is a Wip Singleplayer fps game
 
 ##5 Known Issues:
 1. Everything imaginable
+
+---
 
 ## final notes:
 - This is gonna take a while an a lot of coffee to finnish
