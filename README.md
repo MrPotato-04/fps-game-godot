@@ -31,10 +31,9 @@ This is a Wip Singleplayer fps game
 
 ## final notes:
 - This is gonna take a while an a lot of coffee to finnish
+- If you have any questions, feel free to ask!
 
-If you have any questions, feel free to ask!
-
-[Discord](https://discordapp.com/users/449245292492095498)
+[My Discord](https://discordapp.com/users/449245292492095498)
 
 ## Asset credits
 - [Mark 23  Animated ( Free)](https://sketchfab.com/3d-models/mark-23-animated-free-7abebe340aca4f46b36368417b3ca920) by [BarcodeGames](https://sketchfab.com/barcodegames) [licensed under CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)
