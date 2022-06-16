@@ -37,6 +37,7 @@ var gun_origin  # set in ready otherwise parent is not initalized
 var ads_position = Vector3(-0.107,-1.542,-0.30)
 var gun_translation
 
+var bullet_holes: Array
 var scene
 
 func _ready():
@@ -44,7 +45,7 @@ func _ready():
 	_create_audio_players(20)
 	_AnimationPlayer.connect("animation_finished", self, "_anim_finished")
 	scene = get_tree().get_root().get_node("./Map/objects")
-	print(scene)
+	
 func _anim_finished(name: String):
 	anim_finished = name
 	gun_anim_state = gun_anim_states[0]
@@ -109,12 +110,24 @@ func _shoot():
 				player.play()
 				#_AnimationPlayer.play(gun_anim_state)
 				break
+
 func _cast_bullet_ray():
 	var b_pos = raycaster.get_collision_point()
 	var b = b_decal.instance()
-	raycaster.get_collider().add_child(b)
-	b.global_transform.origin = b_pos
-	b.look_at(raycaster.get_collision_point() + raycaster.get_collision_normal(), Vector3.UP)
+	if raycaster.get_collider() != null :
+		raycaster.get_collider().add_child(b)
+		b.global_transform.origin = b_pos
+		b.look_at(raycaster.get_collision_point() + raycaster.get_collision_normal(), Vector3.UP)
+		bullet_holes.append(b)
+		var timer = b.get_child(1)
+		timer.connect("timeout", self, "_delete_bullet_hole")
+		timer.start()
+	else:
+		pass
+	
+func _delete_bullet_hole():
+	bullet_holes[0].queue_free()
+	bullet_holes.pop_front()
 
 func _create_audio_players(num_of_players):
 	for i in num_of_players:

@@ -251,7 +251,7 @@ surfaces/0 = {
 "vertex_count": 314
 }
 
-[node name="Gun" type="MeshInstance"]
+[node name="Gun" type="Spatial"]
 transform = Transform( 0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 0, 0, 0 )
 script = ExtResource( 8 )
 
@@ -561,8 +561,8 @@ material/0 = null
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Sketchfab_model/bf2d975137f8485789cd58bed6e8bc8dfbx/Object_2/RootNode/Object_4/Skeleton/Object_10"]
 transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, -10, 151, 19 )
 stream = ExtResource( 9 )
-unit_size = 0.5
-max_db = 1.0
+unit_size = 0.8
+max_db = 0.05
 
 [node name="Object_11" type="MeshInstance" parent="Sketchfab_model/bf2d975137f8485789cd58bed6e8bc8dfbx/Object_2/RootNode/Object_4/Skeleton"]
 mesh = SubResource( 6 )
